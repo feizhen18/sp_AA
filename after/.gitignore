@@ -1,0 +1,10 @@
+# Ignore environment variables and secrets (CRITICAL FOR SECURITY)
+.env
+
+# Ignore Composer dependencies (these are auto-generated, no need to upload them)
+/vendor/
+composer.lock
+
+# Ignore OS generated files (good practice)
+.DS_Store
+Thumbs.db

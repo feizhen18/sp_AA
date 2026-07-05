@@ -73,6 +73,8 @@ class CryptoVaultTest extends TestCase
         // Attempt to decrypt the corrupted/manipulated stream
         $decryptionResult = secure_vault_decrypt($tamperedPackage);
         
+        echo "\n[DEBUG LOG] Decryption result after attack: ";
+        var_dump($decryptionResult);
         // The AES-256-GCM authentication tag verification should catch this and fail safely
         $this->assertFalse($decryptionResult, "Security Flaw: The system accepted a tampered payload stream instead of failing safely.");
     }
